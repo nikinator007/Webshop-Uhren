@@ -8,3 +8,7 @@ html, body{
 iframe{
 	border:none;
 }
+iframe.product{
+	width:100%;
+	height:100%;
+}
