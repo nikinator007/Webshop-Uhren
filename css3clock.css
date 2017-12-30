@@ -77,11 +77,11 @@
 .inner_face::before {
     /* clock center circle small */
     content: "";
-    width: 18px; /* width of inner circle */
-    height: 18px; /* height of inner circle */
+    width: 10px; /* width of inner circle */
+    height: 10px; /* height of inner circle */
     border-radius: 18px;
-    margin-left: -9px; /* set this value of 1/2 width value*/
-    margin-top: -9px; /* set this value of 1/2 height value*/
+    margin-left: -5px; /* set this value of 1/2 width value*/
+    margin-top: -5px; /* set this value of 1/2 height value*/
     background: black;
     position: absolute;
     top: 50%;
@@ -90,13 +90,13 @@
     }
 
 .inner_face::after {
-    content: "SHOP";
+    content: "ClockShop™"; /*The face text goes here*/
     position: absolute;
     width: 100%;
-    font: normal 0.8em Arial;
+    font: normal 0.5em Arial;
     color: gray;
     text-align: center;
-    top: 75%
+    top: 65%
     }
 
 .hand, .hand.hour {
