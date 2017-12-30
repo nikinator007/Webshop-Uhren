@@ -1,0 +1,48 @@
+html, body{
+	width:100%;
+	height:100%;
+	font-family: Arial, Verdana, sans-serif;
+	padding:0px;
+	margin:0px;
+}
+iframe{
+	border:none;
+}
+iframe.produkt{
+	width:100%;
+	height:100%;
+}
+iframe.titleBar{
+	width:100%;
+	height:70px;
+	margin-bottom: 0px;
+}
+#customShoppingBar{
+	width:100%;
+	height: 60px;
+	margin-top: 0px;
+	padding-top: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#customShoppingBar div{
+	line-height: 100%;
+}
+#customShoppingBar #preisDisplay{
+	font-size: 1.5em;
+	margin-left: 20px;
+}
+#customShoppingBar #preisDisplay #produktName{
+	font-weight: bold;
+}
+#customShoppingBar #preisDisplay #preis{
+	font-weight: bold;
+}
+#customShoppingBar #shoppingCartButtonDiv{
+	margin-right: 20px;
+}
+#customShoppingBar #shoppingCartButton{
+	padding:10px;
+	outline:none;
+}

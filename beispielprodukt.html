@@ -3,12 +3,32 @@
 <head>
 	<title>Rolex Cosmograph Daytona</title> 									<!--Produktname-->
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="zusatzdateien/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-	<iframe src="titelleiste.html" style="width:100%;height:7%;" scrolling="no"></iframe>
-	<iframe src="https://www.rolex.com/de/watches/cosmograph-daytona/m116500ln-0002.html" class="product"></iframe><!--URL von offizieller Produktseite-->
+	<iframe src="zusatzdateien/titelleiste.html" scrolling="no" class="titleBar"></iframe>
+
+	<div id="customShoppingBar">
+		<div id="preisDisplay">
+			<span id="produktName"></span> - ClockShop™ Preis: €				<!--Produktname-->
+			<span id="preis"></span>,-											<!--Preis-->
+		</div>
+		<div id="shoppingCartButtonDiv">
+			<button id="shoppingCartButton" onclick="einkaufswagen();">
+				In den Einkaufswagen
+			</button>
+		</div>
+	</div>
+	<hr style="margin:0px;padding:0px;">
+
+	<iframe src="" class="produkt" id="produktDisplay"></iframe>				<!--URL von offizieller Produktseite-->
+
+	<iframe src="zusatzdateien/footer.html" scrolling="no" class="footer"></iframe>
+
+	<script>produktID = "uhr_0"</script>										<!--Hier Produkt-ID eintragen-->
+	<script src="zusatzdateien/datenbank.js"></script>
+	<script src="zusatzdateien/produktManager.js"></script>
 </body>
 </html>
