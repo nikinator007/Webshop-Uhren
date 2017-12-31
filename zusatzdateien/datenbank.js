@@ -1,11 +1,11 @@
 datenbank = {
-	"uhr_0":{
-		name:"Beispielname",
-		preis:"1234",
-		url:"https://example.com",
-		bild:"beispiel.jpg",
-		location:"beispielprodukt.html",
-		kategorie:"armbanduhr"
+	"uhr_0":{							//Produkt ID
+		name:"Beispielname", 			//Name der Uhr
+		preis:"1234",					//Preis. Idealerweise dem Herstellerpreis anpassen
+		url:"https://example.com",		//URL der echten Produktseite
+		bild:"beispiel.jpg",			//Vorschaubild der Uhr
+		location:"beispielprodukt.html",//Dateiname der Uhr auf ClockShop
+		kategorie:"armbanduhr"			//Kategorie
 	},
 	"uhr_1":{
 		name:"Rolex Cosmograph Daytona",

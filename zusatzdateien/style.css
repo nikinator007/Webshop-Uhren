@@ -8,15 +8,18 @@ html, body{
 iframe{
 	border:none;
 }
-iframe.produkt{
-	width:100%;
-	height:100%;
-}
+
 iframe.titleBar{
 	width:100%;
 	height:70px;
 	margin-bottom: 0px;
 }
+
+iframe.produkt{
+	width:100%;
+	height:100%;
+}
+
 #customShoppingBar{
 	width:100%;
 	height: 60px;
