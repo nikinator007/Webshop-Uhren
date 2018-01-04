@@ -1,8 +1,9 @@
 function run(){
-	document.title = datenbank[produktID].name;
-	document.getElementById("produktName").innerHTML = datenbank[produktID].name;
+	document.title = datenbank[produktID].hersteller + " " + datenbank[produktID].name;
+	document.getElementById("produktName").innerHTML = datenbank[produktID].hersteller + " " + datenbank[produktID].name;
 	document.getElementById("preis").innerHTML = datenbank[produktID].preis;
 	document.getElementById("produktDisplay").src = datenbank[produktID].url;
+	document.getElementById("uhrIcon").href = "../bilder/" + datenbank[produktID].bild;
 }
 
 function getCookie(cname){
