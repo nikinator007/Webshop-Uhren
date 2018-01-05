@@ -53,4 +53,22 @@ datenbank = {
 		dateiname:"uhr_5.html",
 		kategorie:"armbanduhr"
 	},
+	"uhr_6":{
+		hersteller:"Qlocktwo",
+		name:"Classic",
+		preis:"1.185",
+		url:"https://qlocktwo.com/de/qlocktwo-classic/",
+		bild:"uhr_6.jpg",
+		dateiname:"uhr_6.html",
+		kategorie:"wanduhr"
+	},
+	"uhr_7":{
+		hersteller:"Qlocktwo",
+		name:"Touch",
+		preis:"525",
+		url:"https://qlocktwo.com/de/qlocktwo-touch/",
+		bild:"uhr_7.jpg",
+		dateiname:"uhr_7.html",
+		kategorie:"standuhr"
+	},
 }
