@@ -1,7 +1,7 @@
 .outer_face {
     position: relative;
-    height: 100%; /* height of clock */
-	width: 100%; /* width of clock */
+    height: 90%; /* height of clock */
+	width: 90%; /* width of clock */
     border-radius: 100%; /* clock round corner radius */
     background: white;
     box-shadow: inset 0 0 10px gray;
