@@ -24,7 +24,7 @@ function getCookie(cname){
 
 function einkaufswagen(){
 	if (getCookie("produkte").length == 0){
-		document.cookie = "produkte=" + "[]" + ";path=/";
+		document.cookie = "produkte=" + "[]" + ";path=/sites/ClockShop";
 	}
 
 	if (JSON.parse(getCookie("produkte")).indexOf(produktID) == "-1"){

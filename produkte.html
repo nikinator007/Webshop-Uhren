@@ -5,14 +5,68 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="zusatzdateien/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#produktMenu{
+			display:flex;
+		}
+		#produktMenu > div{
+			color:white;
+			background-color: #202020;
+			cursor:default;
+			margin-right: 20px;
+		}
+		#produktMenu > div > div{
+			padding:10px;
+		}
+		.dropdown{
+			z-index: 1;
+			position: relative;
+		}
+		.dropdownContent{
+			display:none;
+		}
+		.dropdownContent > div{
+			padding:5px;
+		}
+		.dropdown:hover .dropdownContent{
+			display:block;
+			position:absolute;
+			left:0px;
+			min-width: 200px;
+			background-color: #202020;
+		}
+	</style>
 </head>
 <body>
 	<iframe src="zusatzdateien/titelleiste.html" scrolling="no" class="titleBar"></iframe>
 	<div id="inhalt">
 		<h1>Produkte</h1>
-		<div id="produktMenu">
-	 		<button>Ich bin ein unnützer Platzhalterknopf</button>
+
+		<div id="produktMenu" onclick="uhrenAnzeigen();">
+			<div class="dropdown"><div>Kategorien</div>
+				<div class="dropdownContent">
+					<div><input type="checkbox" name="typ" value="armbanduhr" checked>Armbanduhren</div>
+					<div><input type="checkbox" name="typ" value="wanduhr" checked>Wanduhren</div>
+					<div><input type="checkbox" name="typ" value="standuhr" checked>Standuhren</div>
+					<div><input type="checkbox" name="typ" value="besondere uhr" checked>Besondere Uhren</div>
+				</div>
+			</div>
+			<div class="dropdown"><div>Hersteller</div>
+				<div class="dropdownContent" id="herstellerListe">
+					<div><input type="checkbox" checked>BSP.</div>
+					<div><input type="checkbox">Rolex</div>
+					<div><input type="checkbox">Omega</div>
+					<div><input type="checkbox">Breitling</div>
+				</div>
+			</div>
+			<div class="dropdown"><div>Sortieren</div>
+				<div class="dropdownContent">
+					<div><input type="radio" name="sortierenNach" checked>Preis - Aufsteigend</div>
+					<div><input type="radio" name="sortierenNach">Preis - Absteigend</div>
+				</div>
+			</div>
 		</div>
+
 		<div id="produktListe">
 			<!--Das wird mit JavaScript gefüllt-->
 		</div>
@@ -22,10 +76,17 @@
 	<script src="zusatzdateien/datenbank.js"></script>
 	<script>
 	function uhrenAnzeigen(){
-		var produktListe = document.getElementById("produktListe");
-		console.log(datenbank)
+		var produkte = [];
 		for (var uhr in datenbank){
 			uhr = datenbank[uhr];
+			produkte.push(uhr);
+		}
+		produkte = filter(produkte);
+
+		var produktListe = document.getElementById("produktListe");
+		produktListe.innerHTML = "";
+		for (var i = 0; i < produkte.length; i++){
+			uhr = produkte[i];
 			produktListe.innerHTML+=`
 				<a class="produkt" href="uhren/${uhr.dateiname}">
 					<img src="bilder/${uhr.bild}">
@@ -35,6 +96,72 @@
 			`
 		}
 	}
+
+	function filter(produkte){
+		produkte = produkte.sort(function(a,b){
+			var temp = a.preis.split(".").join("") - b.preis.split(".").join("");
+			return (document.getElementsByName("sortierenNach")[0].checked) ? temp : -temp;
+		});
+
+
+
+		var erlaubtListe = [];
+		var herstellerBoxen = document.getElementsByName("hersteller");
+		for (var i = 0; i < herstellerBoxen.length; i++){
+			if (herstellerBoxen[i].checked){
+				erlaubtListe.push(herstellerBoxen[i].value.toLowerCase());
+			}
+		}
+
+		herstellerGefiltert = [];
+		for (var i = 0; i < produkte.length; i++){
+			if (erlaubtListe.indexOf(produkte[i].hersteller.toLowerCase()) != -1){
+				herstellerGefiltert.push(produkte[i]);
+			}
+		}
+1
+
+
+		var erlaubtListe = [];
+		var typBoxen = document.getElementsByName("typ");
+		for (var i = 0; i < typBoxen.length; i++){
+			if (typBoxen[i].checked){
+				erlaubtListe.push(typBoxen[i].value.toLowerCase());
+			}
+		}
+		var typGefiltert = [];
+		for (var i = 0; i < herstellerGefiltert.length; i++){
+			if (erlaubtListe.indexOf(herstellerGefiltert[i].kategorie.toLowerCase()) != -1){
+				typGefiltert.push(herstellerGefiltert[i]);
+			}
+		}
+
+
+		return typGefiltert;
+	}
+
+	function herstellerCheckBoxenErstellen(){
+		var hersteller = [];
+		var produkte = [];
+		for (var uhr in datenbank){
+			uhr = datenbank[uhr];
+			produkte.push(uhr);
+		}
+		for (var i = 0; i < produkte.length; i++){
+			if (hersteller.indexOf(produkte[i].hersteller) == -1){
+				hersteller.push(produkte[i].hersteller);
+			}
+		}
+		hersteller = hersteller.sort();
+
+		var herstellerListe = document.getElementById("herstellerListe");
+		herstellerListe.innerHTML = "";
+		for (var i = 0; i < hersteller.length; i++){
+			herstellerListe.innerHTML += `<div><input type="checkbox" name="hersteller" value="${hersteller[i]}" checked>${hersteller[i]}</div>`
+		}
+	}
+
+	herstellerCheckBoxenErstellen();
 	uhrenAnzeigen();
 	</script>
 </body>
