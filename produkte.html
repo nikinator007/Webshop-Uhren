@@ -14,43 +14,28 @@
 	 		<button>Ich bin ein unnützer Platzhalterknopf</button>
 		</div>
 		<div id="produktListe">
-			<a class="produkt" href="uhren/uhr_1.html">
-				<img src="bilder/uhr_1.jpg">
-				<div class="produktName">Rolex Cosmograph Daytona</div>
-				<div class="preis">12.345€</div>
-			</a>
-			<a class="produkt" href="uhren/uhr_1.html">
-				<img src="bilder/uhr_1.jpg">
-				<div class="produktName">Rolex Cosmograph Daytona</div>
-				<div class="preis">12.345€</div>
-			</a>
-			<a class="produkt" href="uhren/uhr_1.html">
-				<img src="bilder/uhr_1.jpg">
-				<div class="produktName">Rolex Cosmograph Daytona</div>
-				<div class="preis">12.345€</div>
-			</a>
-			<a class="produkt" href="uhren/uhr_1.html">
-				<img src="bilder/uhr_1.jpg">
-				<div class="produktName">Rolex Cosmograph Daytona</div>
-				<div class="preis">12.345€</div>
-			</a>
-			<a class="produkt" href="uhren/uhr_1.html">
-				<img src="bilder/uhr_1.jpg">
-				<div class="produktName">Rolex Cosmograph Daytona</div>
-				<div class="preis">12.345€</div>
-			</a>
-			<a class="produkt" href="uhren/uhr_1.html">
-				<img src="bilder/uhr_1.jpg">
-				<div class="produktName">Rolex Cosmograph Daytona</div>
-				<div class="preis">12.345€</div>
-			</a>
-			<a class="produkt" href="uhren/uhr_1.html">
-				<img src="bilder/uhr_1.jpg">
-				<div class="produktName">Rolex Cosmograph Daytona</div>
-				<div class="preis">12.345€</div>
-			</a>
+			<!--Das wird mit JavaScript gefüllt-->
 		</div>
 	</div>
 	<iframe src="zusatzdateien/footer.html" scrolling="no" class="footer"></iframe>
+
+	<script src="zusatzdateien/datenbank.js"></script>
+	<script>
+	function uhrenAnzeigen(){
+		var produktListe = document.getElementById("produktListe");
+		console.log(datenbank)
+		for (var uhr in datenbank){
+			uhr = datenbank[uhr];
+			produktListe.innerHTML+=`
+				<a class="produkt" href="uhren/${uhr.dateiname}">
+					<img src="bilder/${uhr.bild}">
+					<div class="produktName">${uhr.hersteller} ${uhr.name}</div>
+					<div class="preis">${uhr.preis},-</div>
+				</a>
+			`
+		}
+	}
+	uhrenAnzeigen();
+	</script>
 </body>
 </html>
