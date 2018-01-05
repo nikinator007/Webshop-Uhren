@@ -30,7 +30,7 @@ function einkaufswagen(){
 	if (JSON.parse(getCookie("produkte")).indexOf(produktID) == "-1"){
 		var produkte = JSON.parse(getCookie("produkte"));
 		produkte.push(produktID);
-		document.cookie = "produkte=" + JSON.stringify(produkte) + ";path=/";
+		document.cookie = "produkte=" + JSON.stringify(produkte) + ";path=/sites/ClockShop";
 	}
 }
 
