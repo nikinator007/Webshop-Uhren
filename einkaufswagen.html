@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ClockShop™ - Produkte</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="zusatzdateien/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		#produktMenu{
+			display:flex;
+		}
+		#produktMenu > div{
+			color:white;
+			background-color: #202020;
+			cursor:default;
+			margin-right: 20px;
+		}
+		#produktMenu > div > div{
+			padding:10px;
+		}
+		.dropdown{
+			z-index: 1;
+			position: relative;
+		}
+		.dropdownContent{
+			display:none;
+		}
+		.dropdownContent > div{
+			padding:5px;
+		}
+		.dropdown:hover .dropdownContent{
+			display:block;
+			position:absolute;
+			left:0px;
+			min-width: 200px;
+			background-color: #202020;
+		}
+	</style>
+</head>
+<body>
+	<iframe src="zusatzdateien/titelleiste.html" scrolling="no" class="titleBar"></iframe>
+	<div id="inhalt">
+		<h1>Einkaufswagen</h1>
+		<div id="produktListe">
+			<!--Das wird mit JavaScript gefüllt-->
+		</div>
+	</div>
+	<iframe src="zusatzdateien/footer.html" scrolling="no" class="footer"></iframe>
+
+	<script src="zusatzdateien/datenbank.js"></script>
+	<script>
+	function uhrenAnzeigen(){
+		if (getCookie("produkte").length == 0){
+			return;
+		}
+
+		var produkte = JSON.parse(getCookie("produkte"));
+		var produktListe = document.getElementById("produktListe");
+		produktListe.innerHTML = "";
+		for (var i = 0; i < produkte.length; i++){
+			var uhr = datenbank[produkte[i]];
+			produktListe.innerHTML+=`
+				<a class="produkt" href="uhren/${uhr.dateiname}">
+					<img src="bilder/${uhr.bild}">
+					<div class="produktName">${uhr.hersteller} ${uhr.name}</div>
+					<div class="preis">${uhr.preis},-</div>
+				</a>
+			`
+		}
+	}
+
+	function getCookie(cname){
+		var name = cname + "=";
+		var decodedCookie = decodeURIComponent(document.cookie);
+		var ca = decodedCookie.split(';');
+		for(var i = 0; i <ca.length; i++) {
+			var c = ca[i];
+			while (c.charAt(0) == ' ') {
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) == 0) {
+				return c.substring(name.length, c.length);
+			}
+		}
+		return "";
+	}
+
+	uhrenAnzeigen();
+	</script>
+</body>
+</html>

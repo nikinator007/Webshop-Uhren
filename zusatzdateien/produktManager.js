@@ -24,13 +24,12 @@ function getCookie(cname){
 
 function einkaufswagen(){
 	if (getCookie("produkte").length == 0){
-		document.cookie = "produkte=" + "[]" + ";path=/sites/ClockShop";
+		document.cookie = "produkte=" + "[]" + ((window.location.hostname.length > 0) ? ";path=/sites/ClockShop" : ";path=/");
 	}
-
 	if (JSON.parse(getCookie("produkte")).indexOf(produktID) == "-1"){
 		var produkte = JSON.parse(getCookie("produkte"));
 		produkte.push(produktID);
-		document.cookie = "produkte=" + JSON.stringify(produkte) + ";path=/sites/ClockShop";
+		document.cookie = "produkte=" + JSON.stringify(produkte) + ((window.location.hostname.length > 0) ? ";path=/sites/ClockShop" : ";path=/");
 	}
 }
 
