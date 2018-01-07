@@ -125,4 +125,5 @@ iframe.footer{
 #customShoppingBar #shoppingCartButton{
 	padding:10px;
 	outline:none;
+	font-weight: bold;
 }
