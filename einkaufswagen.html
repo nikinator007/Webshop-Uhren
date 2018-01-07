@@ -6,35 +6,7 @@
 	<link rel="stylesheet" href="zusatzdateien/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		#produktMenu{
-			display:flex;
-		}
-		#produktMenu > div{
-			color:white;
-			background-color: #202020;
-			cursor:default;
-			margin-right: 20px;
-		}
-		#produktMenu > div > div{
-			padding:10px;
-		}
-		.dropdown{
-			z-index: 1;
-			position: relative;
-		}
-		.dropdownContent{
-			display:none;
-		}
-		.dropdownContent > div{
-			padding:5px;
-		}
-		.dropdown:hover .dropdownContent{
-			display:block;
-			position:absolute;
-			left:0px;
-			min-width: 200px;
-			background-color: #202020;
-		}
+
 	</style>
 </head>
 <body onresize="footerPositionieren();">
@@ -61,11 +33,12 @@
 		for (var i = 0; i < produkte.length; i++){
 			var uhr = datenbank[produkte[i]];
 			produktListe.innerHTML+=`
-				<a class="produkt" href="uhren/${uhr.dateiname}">
+				<div class="produkt" onclick="produktLöschen('${produkte[i]}')">
 					<img src="bilder/${uhr.bild}">
 					<div class="produktName">${uhr.hersteller} ${uhr.name}</div>
 					<div class="preis">${uhr.preis},-</div>
-				</a>
+					<div class="overlay"><div>Löschen</div></div>
+				</div>
 			`
 		}
 	}
@@ -84,6 +57,15 @@
 			}
 		}
 		return "";
+	}
+
+	function produktLöschen(uhrID){
+		var produkte = JSON.parse(getCookie("produkte"));
+		var index = produkte.indexOf(uhrID);
+		produkte.splice(index,1);//1 gibt an wie viele Elemente entfernt werden sollen
+
+		document.cookie = "produkte=" + JSON.stringify(produkte) + ((window.location.hostname.length > 0) ? ";path=/sites/ClockShop" : ";path=/");
+		uhrenAnzeigen();
 	}
 
 	uhrenAnzeigen();

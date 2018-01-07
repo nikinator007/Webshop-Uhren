@@ -46,12 +46,8 @@ iframe.footer{
 	border:3px solid black;
 	margin:10px;
 	border-radius: 10px;
-}
-
-.produkt a{
-	display:block;
-	width:100%;
-	height:100%;
+	position: relative;
+	cursor: pointer;
 }
 
 .produkt img{
@@ -75,6 +71,29 @@ iframe.footer{
 	display:block;
 	font-weight: bold;
 	margin-left: 10px;
+}
+
+.produkt .overlay{
+	display:none;
+}
+
+.produkt:hover .overlay{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color: #FF0000;
+	opacity: 0.75;
+}
+
+.produkt:hover .overlay div{
+	font-size: 2em;
+	font-weight: bold;
 }
 
 #customShoppingBar{
