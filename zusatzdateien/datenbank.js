@@ -1,4 +1,5 @@
 datenbank = {
+	/*
 	"uhr_0":{							//Produkt ID
 		hersteller:"BSP.",				//Hersteller
 		name:"Beispielname", 			//Name der Uhr
@@ -8,6 +9,11 @@ datenbank = {
 		dateiname:"beispielprodukt.html",//Dateiname der Uhr auf ClockShop
 		kategorie:"armbanduhr"			//Kategorie
 	},
+	*/
+
+	/*
+		Swatch und Omega lassen sich beide nicht als iframe einbetten.
+	*/
 	"uhr_1":{
 		hersteller:"Rolex",
 		name:"Cosmograph Daytona",
@@ -70,5 +76,41 @@ datenbank = {
 		bild:"uhr_7.jpg",
 		dateiname:"uhr_7.html",
 		kategorie:"standuhr"
+	},
+	"uhr_8":{
+		hersteller:"[Hersteller Unbekannt]",
+		name:"Wiener Tischuhr",
+		preis:"2.000",
+		url:"https://www.kunst19.at/product_info.php?info=p592_wiener-tischuhr---viennese-table-clock--c--1820.html",
+		bild:"uhr_8.jpg",
+		dateiname:"uhr_8.html",
+		kategorie:"standuhr"
+	},
+	"uhr_9":{
+		hersteller:"Breitling",
+		name:"Transocean Chronograph",
+		preis:"18.670",
+		url:"https://www.breitling.com/de/models/transocean/transocean-chronograph/",
+		bild:"uhr_9.jpg",
+		dateiname:"uhr_9.html",
+		kategorie:"armbanduhr"
+	},
+	"uhr_10":{
+		hersteller:"Casio",
+		name:"GW-7900B-1ER",
+		preis:"149",
+		url:"https://www.casio-europe.com/de/produkte/uhren/g-shock/gw-7900b-1er/",
+		bild:"uhr_10.jpg",
+		dateiname:"uhr_10.html",
+		kategorie:"armbanduhr"
+	},
+	"uhr_11":{
+		hersteller:"Perrot",
+		name:"Kirchturmuhr-Ziffernblatt",
+		preis:"7.500",
+		url:"http://www.perrot-turmuhren.de/turmuhren-laeuteanlagen-sonderuhren-turmzieren-glockenspiele/turmuhrenbau-mechanische-turmuhr-kirchturmuhren-bahnhofsuhren/zifferblatt-restaurieren-zifferblaetter-zeiger.html",
+		bild:"uhr_11.jpg",
+		dateiname:"uhr_11.html",
+		kategorie:"besondere uhr"
 	},
 }

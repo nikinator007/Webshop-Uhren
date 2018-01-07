@@ -60,15 +60,26 @@ iframe.footer{
 	text-align:left;
 }
 
-.produkt img{
-	max-width: 230px;
-	max-height: 250px;
-	width:auto;
-	height:auto;
+#inhalt > div > a.produkt:hover{
+	text-decoration: none;
+}
+
+.produkt .imgContainer{
+	width:230px;
+	height:230px;
+	display:flex;
+	align-items: center;
+	justify-content: center;
 	margin:auto;
 	margin-top:10px;
 	margin-bottom: 10px;
-	display:block;
+}
+
+.produkt img{
+	max-width: 100%;
+	max-height: 100%;
+	width:auto;
+	height:auto;
 }
 
 .produkt .produktName{

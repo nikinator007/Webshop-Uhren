@@ -59,8 +59,8 @@
 			</div>
 			<div class="dropdown"><div>Sortieren</div>
 				<div class="dropdownContent">
-					<div><input type="radio" name="sortierenNach" checked>Preis - Aufsteigend</div>
-					<div><input type="radio" name="sortierenNach">Preis - Absteigend</div>
+					<div><input type="radio" name="sortierenNach" checked>Preis - Absteigend</div>
+					<div><input type="radio" name="sortierenNach">Preis - Aufsteigend</div>
 				</div>
 			</div>
 		</div>
@@ -88,7 +88,7 @@
 			uhr = produkte[i];
 			produktListe.innerHTML+=`
 				<a class="produkt" href="uhren/${uhr.dateiname}">
-					<img src="bilder/${uhr.bild}">
+					<div class="imgContainer"><img src="bilder/${uhr.bild}"></div>
 					<div class="produktName">${uhr.hersteller} ${uhr.name}</div>
 					<div class="preis">${uhr.preis},-</div>
 				</a>
@@ -99,7 +99,7 @@
 	function filter(produkte){
 		produkte = produkte.sort(function(a,b){
 			var temp = a.preis.split(".").join("") - b.preis.split(".").join("");
-			return (document.getElementsByName("sortierenNach")[0].checked) ? temp : -temp;
+			return (document.getElementsByName("sortierenNach")[0].checked) ? -temp : temp;
 		});
 
 
