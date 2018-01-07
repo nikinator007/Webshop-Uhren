@@ -108,7 +108,7 @@ datenbank = {
 		hersteller:"Perrot",
 		name:"Kirchturmuhr-Ziffernblatt",
 		preis:"7.500",
-		url:"http://www.perrot-turmuhren.de/turmuhren-laeuteanlagen-sonderuhren-turmzieren-glockenspiele/turmuhrenbau-mechanische-turmuhr-kirchturmuhren-bahnhofsuhren/zifferblatt-restaurieren-zifferblaetter-zeiger.html",
+		url:"https://www.villaterra-shop.de/ziffernbl%C3%A4tter-turmuhren/",
 		bild:"uhr_11.jpg",
 		dateiname:"uhr_11.html",
 		kategorie:"besondere uhr"

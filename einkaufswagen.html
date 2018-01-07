@@ -33,7 +33,7 @@
 			var uhr = datenbank[produkte[i]];
 			produktListe.innerHTML+=`
 				<div class="produkt" onclick="produktLöschen('${produkte[i]}')">
-					<img src="bilder/${uhr.bild}">
+					<div class="imgContainer"><img src="bilder/${uhr.bild}"></div>
 					<div class="produktName">${uhr.hersteller} ${uhr.name}</div>
 					<div class="preis">${uhr.preis},-</div>
 					<div class="overlay"><div>Löschen</div></div>
