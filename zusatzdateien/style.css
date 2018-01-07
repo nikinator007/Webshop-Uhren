@@ -36,6 +36,14 @@ iframe.footer{
 	width:75%;
 }
 
+#inhalt{
+	text-align: justify;
+}
+
+#inhalt a:hover{
+	text-decoration: underline;
+}
+
 #produktListe{
 	display:flex;
 	flex-wrap: wrap;
