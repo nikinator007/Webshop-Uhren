@@ -57,6 +57,7 @@ iframe.footer{
 	border-radius: 10px;
 	position: relative;
 	cursor: pointer;
+	text-align:left;
 }
 
 .produkt img{
