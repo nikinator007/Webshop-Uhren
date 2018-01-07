@@ -3,18 +3,48 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" type="text/css" href="css3clock.css" />
 	<style>
 		html,body{
 			background-color: #202020;
-			color:white;
+			color:#AAAAAA;
 			height:100%;
 			width:100%;
+		}
+		body{
+			display:flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+		}
+		body > div{
+			margin-top: 30px;
+			margin-bottom: 30px;
+
+			display:flex;
+			flex-direction: column;
+		}
+		body > div > div{
+			padding:5px;
+		}
+		a:hover{
+			text-decoration: underline;
 		}
 	</style>
 
 </head>
 <body>
-	NOTHING TO SEE HERE (YET)
+	<div>
+		<div><a href="../index.html" target="_parent">Home</a></div>
+		<div><a href="../produkte.html" target="_parent">Produkte</a></div>
+		<div><a href="../einkaufswagen.html" target="_parent">Einkaufswagen</a></div>
+	</div>
+	<div>
+		<div>Erstellt von Nikolaus Schindl. © 2017-2018</div>
+		<div><a href="../impressum.html" target="_parent">Impressum</a></div>
+	</div>
+	<div>
+		<div>3</div>
+		<div>3</div>
+	</div>
 </body>
 </html>
