@@ -105,9 +105,9 @@ datenbank = {
 		kategorie:"armbanduhr"
 	},
 	"uhr_11":{
-		hersteller:"Perrot",
-		name:"Kirchturmuhr-Ziffernblatt",
-		preis:"7.500",
+		hersteller:"[Hersteller Unbekannt]",
+		name:"Turmuhr-Zeiger",
+		preis:"369",
 		url:"https://www.villaterra-shop.de/ziffernbl%C3%A4tter-turmuhren/",
 		bild:"uhr_11.jpg",
 		dateiname:"uhr_11.html",
