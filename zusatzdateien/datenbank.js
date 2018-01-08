@@ -12,7 +12,7 @@ datenbank = {
 	*/
 
 	/*
-		Swatch und Omega lassen sich beide nicht als iframe einbetten.
+		Swatch, Omega und TAG Heuer lassen sich nicht als iframe einbetten.
 	*/
 	"uhr_1":{
 		hersteller:"Rolex",
@@ -120,6 +120,15 @@ datenbank = {
 		url:"https://www.breitling.com/en/models/chronoliner/chronoliner-b04/versions/news/",
 		bild:"uhr_12.jpg",
 		dateiname:"uhr_12.html",
+		kategorie:"armbanduhr"
+	},
+	"uhr_13":{
+		hersteller:"Rolex",
+		name:"Cellini Moonphase",
+		preis:"24.550",
+		url:"https://www.rolex.com/de/watches/cellini/m50535-0002.html",
+		bild:"uhr_13.png",
+		dateiname:"uhr_13.html",
 		kategorie:"armbanduhr"
 	},
 	"uhr_14":{
