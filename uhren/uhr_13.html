@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title> 															<!--Produktname-->
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../zusatzdateien/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" id="uhrIcon">
+</head>
+
+<body>
+	<iframe src="../zusatzdateien/titelleiste.html" scrolling="no" class="titleBar"></iframe>
+
+	<div id="customShoppingBar">
+		<div id="preisDisplay">
+			<span id="produktName"></span> - ClockShop™ Preis: €				<!--Produktname-->
+			<span id="preis"></span>,-											<!--Preis-->
+		</div>
+		<div id="shoppingCartButtonDiv">
+			<button id="shoppingCartButton" onclick="einkaufswagen();">
+				In den Einkaufswagen
+			</button>
+		</div>
+	</div>
+	<hr style="margin:0px;padding:0px;">
+
+	<iframe src="" id="produktDisplay"></iframe>								<!--URL von offizieller Produktseite-->
+
+	<iframe src="../zusatzdateien/footer.html" scrolling="no" class="footer"></iframe>
+
+	<script>produktID = "uhr_13"</script>										<!--Hier Produkt-ID eintragen-->
+	<script src="../zusatzdateien/datenbank.js"></script>
+	<script src="../zusatzdateien/produktManager.js"></script>
+</body>
+</html>
