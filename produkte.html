@@ -86,13 +86,7 @@
 		produktListe.innerHTML = "";
 		for (var i = 0; i < produkte.length; i++){
 			uhr = produkte[i];
-			produktListe.innerHTML+=`
-				<a class="produkt" href="uhren/${uhr.dateiname}">
-					<div class="imgContainer"><img src="bilder/${uhr.bild}"></div>
-					<div class="produktName">${uhr.hersteller} ${uhr.name}</div>
-					<div class="preis">${uhr.preis},-</div>
-				</a>
-			`
+			produktListe.innerHTML+='<a class="produkt" href="uhren/' + uhr.dateiname + '"><div class="imgContainer"><img src="bilder/' + uhr.bild + '"></div><div class="produktName">' + uhr.hersteller + " " + uhr.name + '</div>	<div class="preis">' + uhr.preis + ',-</div></a>';
 		}
 	}
 
@@ -118,7 +112,7 @@
 				herstellerGefiltert.push(produkte[i]);
 			}
 		}
-1
+
 
 
 		var erlaubtListe = [];
@@ -156,7 +150,7 @@
 		var herstellerListe = document.getElementById("herstellerListe");
 		herstellerListe.innerHTML = "";
 		for (var i = 0; i < hersteller.length; i++){
-			herstellerListe.innerHTML += `<div><input type="checkbox" name="hersteller" value="${hersteller[i]}" checked>${hersteller[i]}</div>`
+			herstellerListe.innerHTML += '<div><input type="checkbox" name="hersteller" value="' + hersteller[i] + '" checked>' + hersteller[i] + '</div>'
 		}
 	}
 
