@@ -113,4 +113,13 @@ datenbank = {
 		dateiname:"uhr_11.html",
 		kategorie:"besondere uhr"
 	},
+	"uhr_12":{
+		hersteller:"Breitling",
+		name:"Chronoliner B04",
+		preis:"29.990",
+		url:"https://www.breitling.com/en/models/chronoliner/chronoliner-b04/versions/news/",
+		bild:"uhr_12.jpg",
+		dateiname:"uhr_12.html",
+		kategorie:"armbanduhr"
+	},
 }
