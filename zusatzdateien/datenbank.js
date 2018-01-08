@@ -122,4 +122,13 @@ datenbank = {
 		dateiname:"uhr_12.html",
 		kategorie:"armbanduhr"
 	},
+	"uhr_14":{
+		hersteller:"Breitling",
+		name:"Superocean Heritage II",
+		preis:"5.130",
+		url:"https://www.breitling.com/en/models/superocean-heritage/superocean-heritage-ii-chronographe-46/",
+		bild:"uhr_14.jpg",
+		dateiname:"uhr_14.html",
+		kategorie:"armbanduhr"
+	},
 }
