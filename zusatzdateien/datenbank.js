@@ -127,7 +127,7 @@ datenbank = {
 		name:"Cellini Moonphase",
 		preis:"24.550",
 		url:"https://www.rolex.com/de/watches/cellini/m50535-0002.html",
-		bild:"uhr_13.png",
+		bild:"uhr_13.jpg",
 		dateiname:"uhr_13.html",
 		kategorie:"armbanduhr"
 	},
