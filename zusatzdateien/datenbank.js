@@ -140,4 +140,31 @@ datenbank = {
 		dateiname:"uhr_14.html",
 		kategorie:"armbanduhr"
 	},
+	"uhr_15":{
+		hersteller:"Rolex",
+		name:"Sky-Dweller",
+		preis:"15.650",
+		url:"https://www.rolex.com/de/watches/sky-dweller/m326933-0001.html",
+		bild:"uhr_15.jpeg",
+		dateiname:"uhr_15.html",
+		kategorie:"armbanduhr"
+	},
+	"uhr_16":{
+		hersteller:"Rolex",
+		name:"GMT-Master",
+		preis:"35.000",
+		url:"https://www.rolex.com/de/watches/gmt-master-ii/m116719blro-0001.html",
+		bild:"uhr_16.jpg",
+		dateiname:"uhr_16.html",
+		kategorie:"armbanduhr"
+	},
+	"uhr_17":{
+		hersteller:"IWC",
+		name:"Pilot's watch merk XVIII",
+		preis:"nur auf Anfrage",
+		url:"https://www.iwc.com/de/watch-collections/pilot-watches/iw327011-pilot-s-watch-mark-xviii.html",
+		bild:"uhr_17.jpg",
+		dateiname:"uhr_17.html",
+		kategorie:"armbanduhr"
+	},
 }
