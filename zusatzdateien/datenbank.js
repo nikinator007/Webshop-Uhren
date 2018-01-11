@@ -145,7 +145,7 @@ datenbank = {
 		name:"Sky-Dweller",
 		preis:"15.650",
 		url:"https://www.rolex.com/de/watches/sky-dweller/m326933-0001.html",
-		bild:"uhr_15.jpeg",
+		bild:"uhr_15.jpg",
 		dateiname:"uhr_15.html",
 		kategorie:"armbanduhr"
 	},
@@ -154,7 +154,7 @@ datenbank = {
 		name:"GMT-Master",
 		preis:"35.000",
 		url:"https://www.rolex.com/de/watches/gmt-master-ii/m116719blro-0001.html",
-		bild:"uhr_16.jpg",
+		bild:"uhr_16.png",
 		dateiname:"uhr_16.html",
 		kategorie:"armbanduhr"
 	},
