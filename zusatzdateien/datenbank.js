@@ -158,13 +158,4 @@ datenbank = {
 		dateiname:"uhr_16.html",
 		kategorie:"armbanduhr"
 	},
-	"uhr_17":{
-		hersteller:"IWC",
-		name:"Pilot's Watch Mark XVIII",
-		preis:"nur auf Anfrage",
-		url:"https://www.iwc.com/de/watch-collections/pilot-watches/iw327011-pilot-s-watch-mark-xviii.html",
-		bild:"uhr_17.jpg",
-		dateiname:"uhr_17.html",
-		kategorie:"armbanduhr"
-	},
 }
