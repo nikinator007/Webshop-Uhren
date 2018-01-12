@@ -4,6 +4,14 @@ function run(){
 	document.getElementById("preis").innerHTML = datenbank[produktID].preis;
 	document.getElementById("produktDisplay").src = datenbank[produktID].url;
 	document.getElementById("uhrIcon").href = "../bilder/" + datenbank[produktID].bild;
+
+	var splitText = '<iframe src="../zusatzdateien/footer.html" scrolling="no" class="footer"></iframe>';
+	var body = document.getElementsByTagName("body")[0];
+	var splitHTML = body.innerHTML.split(splitText);
+	splitHTML[0] +="Quelle: " + datenbank[produktID].url;
+	var joinedHTML = splitHTML.join(splitText);
+	body.innerHTML = joinedHTML;
+
 }
 
 function getCookie(cname){
