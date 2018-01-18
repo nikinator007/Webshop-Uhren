@@ -158,4 +158,13 @@ datenbank = {
 		dateiname:"uhr_16.html",
 		kategorie:"armbanduhr"
 	},
+	"uhr_17":{
+		hersteller:"Casio",
+		name:"Edifice 527D",
+		preis:"159",
+		url:"http://www.casio-europe.com/de/produkte/uhren/edifice/ef-527d-1avef/",
+		bild:"uhr_17.jpg",
+		dateiname:"uhr_17.html",
+		kategorie:"armbanduhr"
+	},
 }
