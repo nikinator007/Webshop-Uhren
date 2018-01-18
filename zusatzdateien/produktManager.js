@@ -8,7 +8,7 @@ function run(){
 	var splitText = '<iframe src="../zusatzdateien/footer.html" scrolling="no" class="footer"></iframe>';
 	var body = document.getElementsByTagName("body")[0];
 	var splitHTML = body.innerHTML.split(splitText);
-	splitHTML[0] +="Quelle: " + datenbank[produktID].url;
+	splitHTML[0] +="<a href=" + datenbank[produktID].url + ">Quelle: " + datenbank[produktID].url + "</a>";
 	var joinedHTML = splitHTML.join(splitText);
 	body.innerHTML = joinedHTML;
 
